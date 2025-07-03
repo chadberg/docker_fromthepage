@@ -1,11 +1,11 @@
-FROM phusion/passenger-ruby27
+FROM phusion/passenger-ruby34
 MAINTAINER Ryan Baumann <ryan.baumann@gmail.com>
 
 # Install the Ubuntu packages.
 # Install Ruby, RubyGems, Bundler, ImageMagick, MySQL and Git
 # Install qt4/qtwebkit libraries for capybara
 # Install build deps for gems installed by bundler
-RUN add-apt-repository 'deb http://archive.ubuntu.com/ubuntu focal universe'
+RUN add-apt-repository 'deb http://archive.ubuntu.com/ubuntu noble universe'
 RUN apt-get update && apt-get install -y imagemagick libmagickwand-dev \
     git graphviz tzdata \
     build-essential && \
